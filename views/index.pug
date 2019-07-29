@@ -1,7 +1,7 @@
-doctype doctype
-html(lang='en')
-    head
-        meta(charset='utf-8')
-        title Knowledge Base
-    body
-        h1 #{title}
+extends layout
+
+block content
+    h1 #{title}
+    ul
+        each article, i in articles
+            li= article.title
